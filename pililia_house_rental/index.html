@@ -1,6 +1,87 @@
 <html>
-  <head><title>Pililia House Rental</title></head>
-  <body>
-    <img src="img/house-front.jpeg" alt="house front" />
-  </body>
+<head>
+    <style>
+/* Smartphones (portrait) ----------- */
+@media only screen 
+and (max-width : 320px) {
+  /* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops ----------- */
+@media only screen 
+        and (min-width : 1224px) {
+    .br { border: solid red 1px; }
+    .bb { border: solid black 1px; }
+    body, html { 
+        height: 100%;  
+        margin: 0; 
+        padding: 0; 
+        background-color: black;
+        font-family: sans-serif;
+    }
+    .container { 
+        display: flex; 
+        justify-content: center;
+    } 
+    .container .image-here { 
+        display:flex;
+        width: 50vw;
+    } 
+    .image-here img {
+        height: 100vh; 
+        width: auto; 
+        margin: auto;
+    }
+    .container .text-here {
+        color: white;
+        width: 50vw;
+    }
+    .text-here .header {
+        text-align: center;
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="image-here">
+            <img src="img/house-front.jpeg" />
+        </div>
+        <div class="text-here">
+            <div class="header">
+                <h1>HOUSE FOR RENT</h1>
+                <h2>500 square meters</h2>
+                <h2>4 levels</h2>
+                <h2>8 bedrooms</h2>
+                <h2>7 Washrooms</h2>
+                <h3>Contacts:<h3>
+                <h3>0917-176-1748<h3>
+                <h3>0906-244-0358<h3>
+            </div>
+        <div>
+    </div>
+</body>
 </html>
