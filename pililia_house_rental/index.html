@@ -44,6 +44,32 @@ and (max-width : 320px) {
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) {
   /* Styles */
+  .image-here img {
+        width: 100vw;
+        height: auto;
+        border: solid black 1px;
+        margin: auto;
+    }
+
+  .lightbox-background {
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        height: 100%;
+        width: 100%;
+        background-color: gray;
+        opacity: 0.8;
+    }
+    .lightbox-image {
+        position: fixed;
+    }
+    .horizontal {
+        width: 100vw;
+        height: auto;
+        top: 50%;
+        transform: translate(0%, -50%);
+        border: solid black 1px;
+    }
 }
 
 /* iPads (landscape) ----------- */
