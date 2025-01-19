@@ -68,6 +68,26 @@ and (orientation : portrait) {
     .text-here .header {
         text-align: center;
     }
+    .lightbox-background {
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        height: 100vh;
+        width: 100vw;
+        border: solid red 1px;
+        background-color: gray;
+        opacity: 0.8;
+    }
+    .lightbox-image {
+        position: absolute;
+    }
+    .horizontal {
+        width: 50vw;
+        height: auto;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        border: solid black 1px;
+    }
 }
     </style>
 </head>
@@ -86,8 +106,47 @@ and (orientation : portrait) {
                 <h3>Contacts:<h3>
                 <h3>0917-176-1748<h3>
                 <h3>0906-244-0358<h3>
+                <p>
+                    <span>More Pictures</span>
+                    <br />
+    <a href="#" onclick="showPic('house-1-garage.jpeg')">Garage</a>
+                    <br />
+    <a href="#" onclick="showPic('house-1-lobby1.jpeg')">Lobby1</a>
+                    <br />
+    <a href="#" onclick="showPic('house-1-lobby2.jpeg')">Lobby2</a>
+                </p>
             </div>
         <div>
+        <div class="lightbox lightbox-background" 
+                style="display:none"
+                onclick="hidePic()"></div>
+        <img class="lightbox lightbox-image" 
+                onclick="hidePic()"
+                style="display:none" />
     </div>
+<script type="text/javascript">
+function hidePic() {
+    document.querySelectorAll('.lightbox').forEach((e) => {
+        e.style.display = 'none';
+    });
+}
+function showPic(file, horizontal=true) {
+    document.querySelectorAll('.lightbox').forEach((e) => {
+        e.style.display = 'block';
+    });
+
+    let theImg = document.querySelector('.lightbox-image');
+    theImg.setAttribute('src', './img/' + file);
+
+    if (horizontal) {
+        theImg.classList.add('horizontal');
+        theImg.classList.remove('vertical');
+    } else {
+        theImg.classList.remove('horizontal');
+        theImg.classList.add('vertical');
+    }
+}
+</script>
 </body>
 </html>
+
